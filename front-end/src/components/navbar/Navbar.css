@@ -1,0 +1,31 @@
+:root {
+    --logo-color:#2f006d;
+  }
+svg { vertical-align: baseline; }
+
+.link {
+    all:unset;
+}
+
+.leftStyle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: left;
+}
+
+.rightStyle {
+    display: flex;
+    justify-content: right;
+}
+
+.logo {
+    font-size: 150%;
+    transition: all 1s ease-in-out;
+    pointer-events: none;
+    text-align: 'center';
+}
+
+.bolded {
+    color: var(--logo-color)
+}
