@@ -11,7 +11,7 @@ const LoginForm = () => {
   };
 
   return (
-    <>
+    <div style={{paddingBottom:'60px'}}>
       <Title level={2} style={{textAlign:'center'}}><b className="bolded">GPU</b>Map</Title>
       <Divider>Login</Divider>
       <Row style={{justifyContent:'center'}}>
@@ -58,7 +58,7 @@ const LoginForm = () => {
         </Form>
         </Card>
       </Row>
-    </>
+    </div>
   );
 }
 

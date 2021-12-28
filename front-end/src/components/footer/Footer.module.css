@@ -1,7 +1,7 @@
 .footer {
 	/* background-color: #001529; */
     background-color: dimgray;
-	height: 100%;
+	max-height: 220px;
 	/* height: calc(250px - (10vw / 2)); */
 	position: relative;
 	display: block;

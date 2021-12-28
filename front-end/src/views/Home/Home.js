@@ -26,7 +26,7 @@ function Home () {
                 <div className="splashContent">
                     <div className="headerText">
 						<Title level={1} className="title">
-							GPU Map
+							<b>GPU</b>Map
 						</Title>
 						<Paragraph className="about">
 							Find GPUs near you! Search and contribute information
