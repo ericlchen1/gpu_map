@@ -68,7 +68,7 @@
 }
 
 .searchBarContainer,
-.modelCards,
+.learnMoreCards,
 .newsContainer {
 	width: 95%;
 	max-width: 1200px;
@@ -87,7 +87,6 @@
 .card {
 	/* margin: 16px auto !important; */
     margin: 16px;
-
 	width: 95%;
 	max-width: 320px;
 	display: flex;
@@ -95,6 +94,7 @@
 	align-items: center;
 	flex-grow: 1;
 	/* text-align: center; */
+    border-color: lightgray;
 }
 
 .cardImage {

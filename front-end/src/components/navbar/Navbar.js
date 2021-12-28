@@ -26,8 +26,8 @@ function Navbar () {
                         Home
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="find" icon={<SearchOutlined className="icon" />}>
-                    <Link className="link" to="/find">
+                <Menu.Item key="search" icon={<SearchOutlined className="icon" />}>
+                    <Link className="link" to="/search">
                         Find GPUs
                     </Link>
                 </Menu.Item>
