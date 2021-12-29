@@ -1,7 +1,6 @@
-import { Form, Input, Button, Checkbox, Divider, Row, Card } from 'antd';
+import { Form, Input, Button, Checkbox, Divider, Row, Card, Typography } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import './LoginForm.css'
-import { Typography } from 'antd';
+import './LoginForm.css';
 
 const { Title } = Typography;
 
