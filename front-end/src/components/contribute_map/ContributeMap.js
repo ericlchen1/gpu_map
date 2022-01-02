@@ -45,7 +45,7 @@ const options = {
 
 function UseOwnLocation({panTo}) {
     return (
-        <Button className={styles.locate} onClick={() => {
+        <Button type="primary" className={styles.locate} onClick={() => {
             navigator.geolocation.getCurrentPosition((position) => {
                 panTo({
                     lat: position.coords.latitude,
