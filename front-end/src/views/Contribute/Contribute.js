@@ -1,6 +1,6 @@
 import { Typography, Divider, Form, Input, Card, Row, Button, Col } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import ContributeMap from '../../components/contribute_map/ContributeMap';
+import ContributeMap from '../../components/contributeMap/ContributeMap';
 import { useState } from 'react';
 
 const { Title, Paragraph } = Typography;
