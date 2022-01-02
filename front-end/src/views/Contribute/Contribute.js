@@ -1,6 +1,7 @@
 import { Typography, Divider, Form, Input, Card, Row, Button, Col } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import ContributeMap from '../../components/contribute_map/ContributeMap';
+import { useState } from 'react';
 
 const { Title, Paragraph } = Typography;
 
@@ -23,6 +24,17 @@ const tailLayout = {
 
 function Contribute () {
     const [form] = Form.useForm();
+    // const [ markerLatitude, setMarkerLatitude ] = useState();
+    // const [ markerLongitude, setMarkerLongitude ] = useState();
+
+    const onLocationChange = (lat, lng) => {
+        // setMarkerLatitude(lat);
+        // setMarkerLongitude(lng);
+        form.setFieldsValue({
+            latitude: lat,
+            longitude: lng,
+        });
+    };
 
     const onFinish = (values) => {
         console.log(values);
@@ -32,15 +44,17 @@ function Contribute () {
         form.resetFields();
     };
 
+    // console.log('contribute rerender')
+
     return (
-        <div style={{paddingBottom:'60px'}}>
+        <div style={{paddingBottom:'60px', backgroundColor:'#F0F0F0'}}>
             <Title level={2} style={{textAlign:'center'}}><b className="bolded">GPU</b>Map</Title>
             <Divider>Contribute</Divider>
             <Paragraph style={{textAlign:'center'}}>Contribute to our growing database of available GPU locations!</Paragraph>
 
             <Row style={{justifyContent:'center', paddingTop:'2vh'}}>
                 <Col style={{margin:'20px'}}>
-                    <Card>
+                    <Card style={{borderRadius: "20px", border: '1px solid gainsboro'}}>
                         <Form {...layout} form={form} onFinish={onFinish} style={{width: '500px'}}>
                             <Title level={4} style={{textAlign:'center'}}>Fill out our contribution form</Title>
                             <Divider></Divider>
@@ -93,10 +107,12 @@ function Contribute () {
                     </Card>
                 </Col>
                 <Col style={{margin:'20px'}}>
-                    <Card>
+                    <Card style={{borderRadius: "20px", border: '1px solid gainsboro'}}>
                         <Title level={4} style={{textAlign:'center'}}>Use Google maps to fill out latitude and longitude</Title>
                         <Divider></Divider>
-                        <ContributeMap></ContributeMap>
+                        <ContributeMap
+                            onLocationChange={onLocationChange}
+                        ></ContributeMap>
                     </Card>
                 </Col>
             </Row>
