@@ -63,10 +63,10 @@ function ContributeMap ({ onLocationChange }) {
 
     return (
         <div>
-            <MapSearchBar/>
+            <MapSearchBar panTo={panTo}/>
             <GoogleMap
                 mapContainerStyle={mapContainerStyle}
-                zoom={10}
+                zoom={14}
                 center={center}
                 options={options}
                 onClick={onMapClick}
@@ -77,7 +77,7 @@ function ContributeMap ({ onLocationChange }) {
                         key={marker.time.toISOString()} 
                         position={{lat: marker.lat, lng: marker.lng}}
                         icon={{
-                            url: '/favicon.ico',
+                            url: '/pin.png',
                             scaledSize: new window.google.maps.Size(40,40),
                             origin: new window.google.maps.Point(0,0),
                             anchor: new window.google.maps.Point(20,20)
