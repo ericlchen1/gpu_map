@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import Home from './views/Home/Home';
 import LoginForm from './views/Login/LoginForm';
 import Contribute from './views/Contribute/Contribute';
+import Search from './views/Search/Search';
 
 function AllRoutes () {
   return (
@@ -12,6 +13,7 @@ function AllRoutes () {
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<LoginForm/>}/>
           <Route path='/contribute' element={<Contribute/>}/>
+          <Route path='/search' element={<Search/>}/>
       </Routes>
   );
 }

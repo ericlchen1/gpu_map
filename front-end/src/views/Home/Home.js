@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useRef } from "react"
 import { DownOutlined } from "@ant-design/icons"
 import { Button, Card, Typography } from 'antd';
 import './Home.css';

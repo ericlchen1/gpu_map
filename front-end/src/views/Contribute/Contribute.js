@@ -1,7 +1,5 @@
 import { Typography, Divider, Form, Input, Card, Row, Button, Col } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import ContributeMap from '../../components/contributeMap/ContributeMap';
-import { useState } from 'react';
 
 const { Title, Paragraph } = Typography;
 
@@ -24,12 +22,8 @@ const tailLayout = {
 
 function Contribute () {
     const [form] = Form.useForm();
-    // const [ markerLatitude, setMarkerLatitude ] = useState();
-    // const [ markerLongitude, setMarkerLongitude ] = useState();
 
     const onLocationChange = (lat, lng) => {
-        // setMarkerLatitude(lat);
-        // setMarkerLongitude(lng);
         form.setFieldsValue({
             latitude: lat,
             longitude: lng,
@@ -44,13 +38,11 @@ function Contribute () {
         form.resetFields();
     };
 
-    // console.log('contribute rerender')
-
     return (
         <div style={{paddingBottom:'60px', backgroundColor:'#F0F0F0'}}>
             <Title level={2} style={{textAlign:'center'}}><b className="bolded">GPU</b>Map</Title>
             <Divider>Contribute</Divider>
-            <Paragraph style={{textAlign:'center'}}>Contribute to our growing database of available GPU locations!</Paragraph>
+            <Paragraph style={{textAlign:'center'}}>Contribute to our growing database of available GPU locations! Report physical GPU drops.</Paragraph>
 
             <Row style={{justifyContent:'center', paddingTop:'2vh'}}>
                 <Col style={{margin:'20px'}}>
