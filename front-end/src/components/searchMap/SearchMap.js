@@ -134,12 +134,16 @@ function SearchMap () {
                     (<InfoWindow
                         position={{lat: selected.latitude, lng: selected.longitude}}
                         onCloseClick={() => {
+                            console.log(selected);
                             setSelected(null);
                         }}
                     >
                         <div>
-                            <h2>Test header</h2>
-                            <p>Test body</p>
+                            <h2>{selected.name}</h2>
+                            <p>{selected.date}</p>
+                            {Object.entries(selected.prices).map(([key, value]) => (
+                                <p>{key} - ${value}</p>
+                            ))}
                         </div>
                     </InfoWindow>)
                     : null}
